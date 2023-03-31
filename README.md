@@ -11,10 +11,11 @@ The following features are supported:
 * Span annotations over multiple tokens and sentences
 * Multiple Annotations per field (stacked annotations)
 * Disambiguation IDs (here called `label_id`)
+* **\[NEW\]**Relations 
 
 The following is __not supported__:
 
-* Relations
+* ~~Relations~~
 * Chain annotations
 * Sub-Token annotations (ignored on reading)
 
