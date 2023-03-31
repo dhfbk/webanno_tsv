@@ -1,7 +1,7 @@
 
 # webanno_tsv
 
-A python library to parse TSV files as produced by the [webanno Software](https://github.com/webanno/webanno) and as described [in their documentation](https://zoidberg.ukp.informatik.tu-darmstadt.de/jenkins/job/WebAnno%20%28GitHub%29%20%28master%29/de.tudarmstadt.ukp.clarin.webanno$webanno-webapp/doclinks/1/#sect_webannotsv).
+A fork of the [webanno_tsv](https://github.com/neuged/webanno_tsv) python library to parse TSV files as produced by the [webanno Software](https://github.com/webanno/webanno) and as described [in their documentation](https://zoidberg.ukp.informatik.tu-darmstadt.de/jenkins/job/WebAnno%20%28GitHub%29%20%28master%29/de.tudarmstadt.ukp.clarin.webanno$webanno-webapp/doclinks/1/#sect_webannotsv).
 
 The following features are supported:
 
@@ -11,7 +11,7 @@ The following features are supported:
 * Span annotations over multiple tokens and sentences
 * Multiple Annotations per field (stacked annotations)
 * Disambiguation IDs (here called `label_id`)
-* **\[NEW\]**Relations 
+* **\[NEW\]** Relations
 
 The following is __not supported__:
 
@@ -19,6 +19,10 @@ The following is __not supported__:
 * Chain annotations
 * Sub-Token annotations (ignored on reading)
 
+Differences w.r.t. the original project:
+
+* Spans without label are extracted (and not ignored)
+* Relations
 
 ## Installation
 
