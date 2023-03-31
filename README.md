@@ -11,18 +11,18 @@ The following features are supported:
 * Span annotations over multiple tokens and sentences
 * Multiple Annotations per field (stacked annotations)
 * Disambiguation IDs (here called `label_id`)
-* **\[NEW\]** Relations
+* **\[NEW\]** Relations (read-only)
 
 The following is __not supported__:
 
-* ~~Relations~~
+* Relations (write)
 * Chain annotations
 * Sub-Token annotations (ignored on reading)
 
 Differences w.r.t. the original project:
 
 * Spans without label are extracted (and not ignored)
-* Relations
+* Relations (read-only)
 
 ## Installation
 
