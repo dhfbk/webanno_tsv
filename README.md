@@ -27,7 +27,7 @@ Differences w.r.t. the original project:
 ## Installation
 
 ```sh
-pip install git+https://github.com/neuged/webanno_tsv
+pip install git+https://github.com/dhfbk/webanno_tsv
 ```
 
 ## Examples
