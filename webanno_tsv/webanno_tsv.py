@@ -341,10 +341,14 @@ def _read_rel_layer(token: Token, row: Dict, layer: str, fields: List[str]) -> L
         m = REL_RE.match(spanLabel[1])
         if not m:
             continue
-        for s in range(len(thisSplice) - 1):
-            thisRelation = thisSplice[s]
-            r = Relation(governor=None, dependent=None, layer=layer, field=thisRelation[0], label=thisRelation[1], label_id=thisRelation[2])
+        if len(thisSplice) == 1:
+            r = Relation(governor=None, dependent=None, layer=layer, field="*", label="*", label_id=-1)
             relations.append((r, token, spanLabel[0][3:], m))
+        else:
+            for s in range(len(thisSplice) - 1):
+                thisRelation = thisSplice[s]
+                r = Relation(governor=None, dependent=None, layer=layer, field=thisRelation[0], label=thisRelation[1], label_id=thisRelation[2])
+                relations.append((r, token, spanLabel[0][3:], m))
     return relations
 
 
