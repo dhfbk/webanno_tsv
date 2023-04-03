@@ -185,6 +185,24 @@ class Document:
             result = [a for a in result if a.field == field]
         return result
 
+    def match_rel_annotations(self, layer='', field='') -> Sequence[Relation]:
+        """
+        Filter this document's relations by the given criteria and return only those
+        matching the given layer and field. Leave a parameter unfilled to
+        include annotations with any value in that slot. For example:
+
+            doc.match_rel_annotations(layer='l1')
+
+        returns relations from layer 'l1' regardless of which sentence they are in or
+        which field in that layer they have.
+        """
+        result = self.relations
+        if layer:
+            result = [a for a in result if a.layer == layer]
+        if field:
+            result = [a for a in result if a.field == field]
+        return result
+
     def with_added_token_strs(self, token_strs: Sequence[str]) -> 'Document':
         """
         Build a new document that contains a sentence made up of tokens from the token
