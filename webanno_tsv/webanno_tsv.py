@@ -136,7 +136,7 @@ class Document:
     sentences: Sequence[Sentence]
     tokens: Sequence[Token]
     annotations: Sequence[Annotation]
-    relations: Sequence[Relation] = []
+    relations: Sequence[Relation]
     path: str = ''
 
     @property
